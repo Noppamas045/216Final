@@ -4,7 +4,7 @@ namespace _216Final
 {
     class CaesarCipher
     {
-        //คำนวน Encryption
+        
         public static char cipherE(char chE, int key)
         {
             if (!char.IsLetter(chE))
@@ -14,7 +14,7 @@ namespace _216Final
             char d = char.IsUpper(chE) ? 'A' : 'a';
             return (char)((((chE + key) - d) % 26) + d);
         }
-        //คำนวน  Decrytion
+        
         public static char cipherD(char chD, int key)
         {
             if (!char.IsLetter(chD))
@@ -24,7 +24,7 @@ namespace _216Final
             char d = char.IsUpper(chD) ? 'A' : 'a';
             return (char)((((chD - key) - d) % 26) + d);
         }
-        //encipher
+        
         public static string Encipher(string input, int key)
         {
             string output = string.Empty;
@@ -33,7 +33,7 @@ namespace _216Final
                 output += cipherE(chE, key);
             return output;
         }
-        //Decipher
+        
         public static string Decipher(string input, int key)
         {
             string output = string.Empty;
@@ -75,7 +75,7 @@ namespace _216Final
                     Console.Write(t);
                     Console.Write("\n");
                 }
-                else break;
+                
                 Console.Write("\n");
             } while (Text != 1 || Text != 2);
             Console.Write("\n");
